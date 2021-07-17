@@ -4,7 +4,8 @@
   </div>
   <div class='card-body'>
     <div class='row'>
-      <div class='col-md-2'>Filter by:</div>
+      <input type=text [(ngModel)]='listFilter'>
+      <div class='col-md-2'>Filter by: {{listFilter}}</div>
       <div class='col-md-4'>
       </div>
     </div>
@@ -38,6 +39,10 @@
                    [style.margin.px]='imageMargin'>
             </td>
             <td>{{product.productName}}</td>
+            <td>{{product.productCode | lowercase}}</td>
+            <td>{{product.releaseDate}}</td>
+            <td>{{product.price | currency:"₺"}}</td>
+            <td>{{product.starRating}}</td>
            
           </tr>
         </tbody>

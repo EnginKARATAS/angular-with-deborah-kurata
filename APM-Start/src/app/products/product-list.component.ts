@@ -1,37 +1,43 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { IProduct } from "./product";
 
 @Component({
     selector: "pm-products",
-    templateUrl: "./product-list.component.html"
+    templateUrl: "./product-list.component.html",
+    styleUrls: ["./product-list.component.css"]
 })
 
-export class ProductListComponent {
-    pageTitle: string =     "Merhaba Angular";
+export class ProductListComponent implements OnInit {
+    ngOnInit(): void {
+        console.log("In OnInit")
+    }
+    pageTitle: string = "Merhaba Angular";
     showImage: boolean = true;
     imageWidth: number = 50;
     imageMargin: number = 2;
 
     listFilter: string = "cart";
 
-    products: any[] = [
+    products: IProduct[] = [
         {
             "productId": 1,
             "productName": "Qualcom Saat",
-            "quantityPerUnit": 10,
             "productCode": "abC",
+            "releaseDate": "march 18 2021",
             "price": 100,
+            "description": "cool saat",
             "starRating": 4,
             "imageUrl": "assets/images/garden_cart.png"
         },
         {
-            "productId": 2,
-            "productName": "Casio Saat",
-            "quantityPerUnit": 14,
-            "productCode": "efg",
-            "price": 222,
-            "starRating": 3,
+            "productId": 1,
+            "productName": "Qualcom Saat",
+            "productCode": "abC",
+            "releaseDate": "march 18 2021",
+            "price": 100,
+            "description": "cool saat",
+            "starRating": 4,
             "imageUrl": "assets/images/hammer.png"
-
         }
     ]
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
+import { ProductService } from "./product.service";
 
 @Component({
     selector: "pm-products",
@@ -14,6 +15,8 @@ export class ProductListComponent implements OnInit {
     imageWidth: number = 50;
     imageMargin: number = 2;
 
+    constructor(private _productService: ProductService){    }
+
     private _listfilter: string = "";
     get listFilter(): string{
         return this._listfilter;
@@ -26,31 +29,8 @@ export class ProductListComponent implements OnInit {
     }
 
     filteredProducts: IProduct[] = [];
-    
 
-
-    products: IProduct[] = [
-        {
-            "productId": 1,
-            "productName": "Qualcom Saat",
-            "productCode": "a-bc",
-            "releaseDate": "march 18 2021",
-            "price": 100,
-            "description": "cool saat",
-            "starRating": 4.5,
-            "imageUrl": "assets/images/garden_cart.png"
-        },
-        {
-            "productId": 1,
-            "productName": "cant Saat",
-            "productCode": "ab-c",
-            "releaseDate": "march 18 2021",
-            "price": 100,
-            "description": "cool saat",
-            "starRating": 3.5,
-            "imageUrl": "assets/images/hammer.png"
-        }
-    ]
+    products: IProduct[] = []
 
     performFilter(filterBy: string): IProduct[]{ 
         filterBy = filterBy.toLocaleLowerCase();
@@ -64,5 +44,7 @@ export class ProductListComponent implements OnInit {
     
     ngOnInit(): void {
         this.listFilter = ""; 
+        this.products = this._productService.getProducts();
+        this.filteredProducts = this.products;
     }
 }

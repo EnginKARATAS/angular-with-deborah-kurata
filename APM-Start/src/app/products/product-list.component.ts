@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { IProduct } from './product';
 import { ProductService } from './product.service';
 
@@ -12,6 +13,8 @@ export class ProductListComponent implements OnInit {
   showImage: boolean = true;
   imageWidth: number = 50;
   imageMargin: number = 2;
+  sub!: Subscription;
+  errorMessage: string = "";
 
   constructor(private _productService: ProductService) {}
 
@@ -41,8 +44,12 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listFilter = '';
-    this.products = this._productService.getProducts();
-    this.filteredProducts = this.products;
+    this.sub = this._productService.getProducts().subscribe({
+      next: products => {
+        this.products = products;
+        this.filteredProducts = this.products;
+      },
+      error: err => this.errorMessage = err
+    });
   }
 }

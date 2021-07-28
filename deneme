@@ -1,0 +1,61 @@
+[33mcommit 31786689c4d6ddf03a9f962d5dbb547596ab9003[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: unknown <43602725+EnginKARATAS@users.noreply.github.com>
+Date:   Wed Jul 28 00:04:46 2021 +0300
+
+    Routing, navigation 1
+
+[33mcommit 78a8a1ea1c4c79df02bc4cebdb06a2e34c91a922[m
+Author: unknown <43602725+EnginKARATAS@users.noreply.github.com>
+Date:   Mon Jul 26 23:06:16 2021 +0300
+
+    subscribe, observable
+
+[33mcommit d83eaf877725088c37d923ffd07bc9898de443d3[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Sat Jul 24 23:32:18 2021 +0300
+
+    update product list component
+
+[33mcommit f967b0567cf1fefd84cff271abf55587ed145432[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Thu Jul 22 16:44:45 2021 +0300
+
+    dependency injection
+
+[33mcommit 010eaff1b2c98b3621dd34c3adf6fb2f914a8583[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Mon Jul 19 18:13:13 2021 +0300
+
+    pipes, input, output, module 7
+
+[33mcommit bbbf5e9f2a6fbaf13f08b51879f7425fcd8ec9d5[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Mon Jul 19 14:15:29 2021 +0300
+
+    custom css, on init pipe, and diffrent pipes
+
+[33mcommit e563cfbe0d12491b4c8a7b548b8d56ccf70982de[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Sat Jul 17 23:31:22 2021 +0300
+
+    work with angular.
+
+[33mcommit 5040fe04f32b3a45ef2046ec8524fd78c68db909[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Sat Jul 17 21:50:12 2021 +0300
+
+    show - hide image in angular+
+    
+    toggle Image functon allows to change show image property. show image property changes with (click) event to true or false. {{showImage ? 'hide' :  'show'}}
+
+[33mcommit 29c94c9eab4064e93b9b6f01ec146b2808e30660[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Sat Jul 17 21:08:17 2021 +0300
+
+    load project
+
+[33mcommit 553623b2d6629cad57016626c87f20de21273e15[m
+Author: Engin Karataş <enginkaratas99@gmail.com>
+Date:   Sat Jul 17 21:02:53 2021 +0300
+
+    Initial commit

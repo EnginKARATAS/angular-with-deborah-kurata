@@ -12,7 +12,7 @@ import { ProductModule } from './products/product.module';
     WelcomeComponent
   ],
   imports: [
-    FormsModule,
+ 
     HttpClientModule,
     RouterModule.forRoot([
       { path: "welcome", component:WelcomeComponent},
